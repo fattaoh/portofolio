@@ -433,7 +433,7 @@ text-shadow: var(--dark-gray);
 }
 .skills-list .learning {
     font-size: 0.9em;
-    color: #888;
+    color: #000000;
     font-style: italic;
 }
 
