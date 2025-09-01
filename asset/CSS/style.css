@@ -411,6 +411,32 @@ text-shadow: var(--dark-gray);
 
 }
 
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.skills-list li {
+    background: #f3f3f3;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: background 0.2s;
+}
+.skills-list li:hover {
+    background: #e0e7ff;
+}
+.skills-list .learning {
+    font-size: 0.9em;
+    color: #888;
+    font-style: italic;
+}
+
 .sertifikat{
     width: 100%;
     height: auto;
