@@ -429,7 +429,7 @@ text-shadow: var(--dark-gray);
     transition: background 0.2s;
 }
 .skills-list li:hover {
-    background: #e0e7ff;
+    background: var(--light);
 }
 .skills-list .learning {
     font-size: 0.9em;
