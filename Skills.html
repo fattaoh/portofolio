@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="asset/CSS/style.css">
+</head>
+<body>
+    <!-- Navbar  -->
+     <nav>
+        <div class="nav-container">
+            <div class="logo" >
+             <a href="">Fattah</a>
+            </div>
+            <div class="nav-links">
+                <div class="link" >
+             <a href="index.html">Home</a>
+            </div>
+            <div class="link" >
+             <a href="About.html">About</a>
+            </div>
+            <div class="link" >
+             <a href="Skills.html">Skills</a>
+            </div>
+            <div class="link" >
+             <a href="Certificate.html">Certificate</a>
+            </div>
+            <div class="contact-button" >
+             <a href="">Contact us</a>
+            </div>
+     </div>
+            <!-- Hamburger -->
+            <div class="hamburger" onclick="hamburger()">
+                <i class="fa-solid fa-burger"></i>
+            </div>
+     <div class="dropdown">
+        <div class="hamburger-content">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Skills.html">Skills</a>
+            <a href="Certificate.html">Certificate</a>
+            <a href="">Contact</a>  
+        </div>
+        <div class="cancel" onclick="cancel()">
+                <i class="fa-solid fa-burger"></i>
+            </div>
+     </div>
+     </div>
+     </nav>
+
+<!-- Section -->
+<section class="main-container">
+    <div class="image">
+        <img src="asset/src/images/Screenshot 2025-07-24 124444.png" style="border-radius: 700px;"  alt="Foto">
+    </div>
+    
+    <div class="content">
+        <div data-aos="fade-up">
+        <h1>Hey i'm <span>Fattah</span></h1>
+        <div class="typewriter">I'm a <span></span></div>
+        <P>I'm a Student And still learning about HTML and CSS.
+            <br>
+            My dream is to be a good Programmer
+        </P>
+        <div class="social-links">
+            <a href="https://github.com/Fattah231-gram"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/fattah-idn-sentul-60b634376/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-google"></i></a>
+        </div>
+        </div>
+        <div class="btn">
+            <button>Download CV</button>
+        </div>
+    </div>
+</section>
+
+<article>
+    <div class="article">
+    <h2><span>Skills</span></h2>
+    <p>
+     <li>
+        <ul>
+            - HTML
+        </ul>
+        <ul>
+            - CSS
+        </ul>
+        <ul>
+            -JavaScript (Learning)
+        </ul>
+     </li>
+    </p>
+    </div>
+</article>
+
+<footer>
+    <div class="footer">
+        <p>Created by Fattah | &copy; 2024 All rights reserved</p>
+    </div>
+</footer>
+
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>            
+AOS.init({offset : 15})
+</script>
+<script>
+    function hamburger(){
+        const navbar= document.querySelector(".dropdown")
+        navbar.style.transform="translate(0px)"
+    }
+    function cancel(){
+        const navbar= document.querySelector(".cancel")
+         navbar.style.transform="translate(-500px)"
+    }
+</script>
+
+<script src="https://kit.fontawesome.com/74bd651971.js" crossorigin="anonymous"></script>
+
+</html>

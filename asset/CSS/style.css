@@ -1,0 +1,432 @@
+:root{
+--primary-dark: #09122C;
+--primary: #872341;
+--primary-light: #af152a;
+--dark: #000000;
+--light: #E17564;
+--white: #872341;
+--black: #000000;
+--gray: #808080;
+--dark-gray: #333333;
+--secondary-color: #FCC61D;
+--text-color: #BE3144;
+--first-color-dark: #F7374F;
+--link-color: #2a3b40;
+--background-color: #BE3144;
+
+/* Font Family */
+--body-font: 'poppins', sans-serif;
+
+/* Font Size */
+--big-font-size: 8rem;
+--h1-font-size: 4.5rem;
+--h2-font-size: 3.5rem;
+--h3-font-size: 2.5rem;
+--larger-font-size: 1.8rem;
+--normal-font-size: 1.4rem;
+--small-font-size: 1.2rem;
+
+
+/* Font Weight */
+--font-weight-normal: 400;
+--font-weight-semi-bold: 600;
+--font-weight-medium: 500;
+--font-weight-bold: 700;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: var(--white);
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+/* Navbar */
+
+nav{
+    position: sticky;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--primary-dark);
+
+}
+.nav-container{
+    width:100% ;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    font-size: var(--h3-font-size);
+    font-weight: bolder;
+    color: var(--text-color);
+}
+
+.logo a{
+    color: var(--text-color);
+    text-decoration: none;
+    /* text-shadow: var(--first-color-dark) 0px 0px 5px; */
+    transition: 0.3s linear;
+}
+
+
+.logo a:hover{
+    scale: 1.1;
+    color: var(--link-color);
+}
+
+.nav-container .nav-links{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-container .nav-links a{
+    position: relative;
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    transform: 0.3s linear;
+}
+
+.nav-container .nav-links a::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--link-color);
+    bottom: -5px;
+    left: 0;
+    transition: 0.2s linear;
+}
+.nav-container .nav-links a:hover::before{
+    width: 100%;
+}
+
+.nav-container .contact-button {
+    background-color: transparent;
+    padding: 5px 20px ;
+    border-radius: 20px;
+    border: 2px solid var(--primary-dark);
+    transition: 0.2s linear;
+}
+
+.nav-container .contact-button a {
+    color: var(--primary);
+    transition: 0.3s linear;
+}
+
+.nav-container .contact-button:hover{
+    background-color: var(--first-color-dark);
+    color: var(--white);
+}
+
+.hamburger, .cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: var(--gray);
+    font-size: var(--larger-font-size);
+    display: none;
+}
+
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: brightness(0.8) blur(4px);
+    box-shadow: 0px 0px 20px var(--first-color-dark);
+    transition: 0.2s linear;
+}
+
+.dropdown .hamburger-content a{
+    color: var(--white);
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .hamburger-content a:hover{
+    background-color: var(--white);
+}
+
+
+/* Hero Section */
+
+section{
+    width: 100%;
+    height: 90vh;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.image {
+    z-index: -1;
+    width: 30%;
+    box-shadow: var(--light);
+    margin: 0px 20px;
+    transition:step-start 0.3s;
+    animation: float 3s ease-in-out infinite;
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+    border-radius: 2000px;
+}
+
+.content{
+    color: var(--dark);
+}
+
+.content h1{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-weight-bold);
+}
+
+.content h1 span{
+color: var(--primary-dark);
+text-shadow: var(--dark-gray);
+}
+
+.typewriter{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-dark);
+}
+
+.typewriter span{
+    font-size: var(--h3-font-size);
+    color: var(--primary-light);
+    text-shadow: var(--primary-dark);
+    position: relative;
+    transition: 0.3s linear;  
+}
+
+.typewriter span::before{
+    content: "";
+    animation: words 10s infinite;
+    color: var(--primary-light);
+}
+
+.typewriter span::after{
+    content: "|";
+    position: relative;
+    width: 2px;
+    height: 100%;
+    border-width: 3px var(--primary) solid;
+    animation: cursor 0.6s linear infinite;
+    opacity: 1;
+}
+
+.content p{
+    font-size: var(--small-font-size);
+    margin-top: 20px;
+    margin-right: 60px;
+    margin-bottom: 20px 0px;
+}
+
+.content .social-links a{
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--primary-dark);
+    color: var(--white);
+    font-size: var(--larger-font-size);
+    text-align: center;
+    line-height: 2.5rem;
+    border-radius: 10%;
+    margin-right: 15px;
+    box-shadow: var(--dark-gray) 0px 0px 5px;
+    transition: 0.3s linear;
+    margin-top: 1rem;
+}
+
+.content btn{
+    box-sizing: content-box;
+}
+
+.content .btn button{
+    width: 320px;
+    height: 6vh;
+    margin-right: 140px;
+    margin-top: 35px;
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: var(--small-font-size);
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    transition: 0.3s linear;
+
+}
+
+
+.content .btn button:hover{
+    background-color: var(--dark);
+    animation: 0.3s linear;
+    color: var(--primary-light);
+    scale: 1;
+    
+}
+
+@keyframes words{
+    0%{content: "Programmer";}
+    25%{content: "Student";}
+    50%{content: "Human";}
+    75%{content: "Normal";}
+    100%{content: "High Schoolers"}
+}
+
+/* Responsive Design */
+
+@media  screen and (max-width: 884px) {
+    body{
+        overflow-y: visible;
+    }
+    .logo{
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        font-size: var(--larger-font-size);
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-container .nav-links{
+        display: none;
+    }
+    .hamburger, .cancel{
+        display: block;
+    }
+    .content{
+        width: 90%;
+    }
+    .social-link i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: var(--larger-font-size);
+    }
+    .cancel{
+        color: var(--white);
+    }
+    .main-container .image{
+        width: 40%;
+        margin: 0px;
+    }
+    .video{
+        width: 50%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.article{
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.article h2{
+    margin-left: 50px;
+}
+
+.article p{
+    margin-left: 50px;
+    font-size: var(--normal-font-size);
+}
+
+.article span{
+    color: var(--primary-dark);
+    font-weight: var(--font-weight-bold);
+}
+
+.article li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 50px;
+    font-size: var(--normal-font-size);
+}
+
+.video{
+    width: 30%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+}
+
+.sertifikat{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--primary-dark);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: var(--white);
+}
