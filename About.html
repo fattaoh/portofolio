@@ -45,7 +45,7 @@
         </div>
         <div class="cancel" onclick="cancel()">
                 <i class="fa-solid fa-burger"></i>
-            </div>
+        </div>
      </div>
      </div>
      </nav>
@@ -107,13 +107,15 @@
 AOS.init({offset : 15})
 </script>
 <script>
+
+
     function hamburger(){
-        const navbar= document.querySelector(".dropdown")
+        const navbar= document.getElementsByClassName(".dropdown")
         navbar.style.transform="translate(0px)"
     }
     function cancel(){
-        const navbar= document.querySelector(".cancel")
-         navbar.style.transform="translate(-500px)"
+        const navbar= document.getElementsByClassName(".cancel")
+        navbar.style.transform="translate(-20px)"
     }
 </script>
 
