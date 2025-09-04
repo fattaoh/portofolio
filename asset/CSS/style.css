@@ -172,7 +172,7 @@ nav{
 }
 
 .dropdown .hamburger-content a:hover{
-    background-color: var(--white);
+    background-color: var(--first-color-dark);
 }
 
 
