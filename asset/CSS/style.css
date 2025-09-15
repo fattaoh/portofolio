@@ -359,6 +359,16 @@ text-shadow: var(--dark-gray);
         justify-content: center;
         align-items: center;
     }
+    .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+}
+
 }
 
 .article{
