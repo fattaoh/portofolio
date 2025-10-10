@@ -332,6 +332,14 @@ text-shadow: var(--dark-gray);
         width: 100%;
         height: auto;
     }
+
+    .image img{
+        width: 300px;
+        height: auto;
+        padding: 1rem ;
+        border-radius: 700px;
+    }
+
     .nav-container .nav-links{
         display: none;
     }
