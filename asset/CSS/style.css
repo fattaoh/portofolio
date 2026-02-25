@@ -515,18 +515,125 @@ nav.scrolled {
 /* ─── Footer ─────────────────────────────────────────────── */
 footer {
   position: relative; z-index: 1;
-  border-top: 1px solid var(--border); background: var(--surface);
-  padding: 32px 40px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  overflow: hidden;
 }
-.footer-inner {
+
+/* Top accent line */
+footer::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), var(--gold), var(--accent), transparent);
+}
+
+.footer-main {
+  max-width: 1180px; margin: 0 auto;
+  padding: 60px 40px 40px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 48px;
+}
+
+/* Brand column */
+.footer-brand .footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem; font-weight: 800;
+  color: var(--text); margin-bottom: 14px; display: block;
+}
+.footer-brand .footer-logo span { color: var(--accent); }
+.footer-brand p {
+  font-size: 0.87rem; line-height: 1.8;
+  color: var(--muted); max-width: 280px; margin-bottom: 22px;
+}
+.footer-social { display: flex; gap: 10px; }
+.footer-social a {
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 9px; border: 1px solid var(--border);
+  background: var(--surface2); color: var(--muted);
+  font-size: 1rem; transition: all var(--transition);
+}
+.footer-social a:hover {
+  border-color: var(--accent); color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(192,24,58,0.2);
+}
+
+/* Nav columns */
+.footer-col h4 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem; font-weight: 700;
+  color: var(--accent); letter-spacing: 1.8px;
+  text-transform: uppercase; margin-bottom: 18px;
+}
+.footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul li a {
+  font-size: 0.87rem; color: var(--muted);
+  transition: color var(--transition), padding-left var(--transition);
+  display: inline-block; position: relative;
+}
+.footer-col ul li a::before {
+  content: '→';
+  position: absolute; left: -16px; opacity: 0;
+  color: var(--accent); font-size: 0.75rem;
+  transition: opacity var(--transition), left var(--transition);
+}
+.footer-col ul li a:hover {
+  color: var(--text); padding-left: 6px;
+}
+.footer-col ul li a:hover::before { opacity: 1; left: -12px; }
+
+/* Status badge in footer */
+.footer-status {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.2);
+  color: #22c55e; font-size: 0.72rem; font-weight: 600;
+  padding: 5px 14px; border-radius: 20px;
+  letter-spacing: 0.5px; margin-top: 10px;
+}
+.footer-status .status-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #22c55e; box-shadow: 0 0 8px #22c55e;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: 20px 40px;
+}
+.footer-bottom-inner {
   max-width: 1180px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 16px;
+  flex-wrap: wrap; gap: 12px;
 }
-.footer-inner p { font-size: 0.82rem; color: var(--muted); }
-.footer-social { display: flex; gap: 14px; }
-.footer-social a { color: var(--muted); font-size: 1.1rem; transition: color var(--transition); }
-.footer-social a:hover { color: var(--accent); }
+.footer-bottom-inner p { font-size: 0.78rem; color: var(--muted); }
+.footer-bottom-inner p strong { color: var(--muted2); font-weight: 600; }
+.footer-bottom-inner span { font-size: 0.78rem; color: var(--muted); }
+.footer-heart { color: var(--accent); animation: heartbeat 1.4s ease-in-out infinite; }
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  14% { transform: scale(1.25); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.15); }
+  56% { transform: scale(1); }
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    padding: 48px 24px 32px;
+    gap: 36px;
+  }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-bottom { padding: 16px 24px; }
+  .footer-bottom-inner { flex-direction: column; text-align: center; gap: 6px; }
+}
+@media (max-width: 480px) {
+  .footer-main { grid-template-columns: 1fr; }
+}
 
 /* ─── Toast ──────────────────────────────────────────────── */
 #toast {
