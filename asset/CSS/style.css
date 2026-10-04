@@ -464,6 +464,40 @@ nav.scrolled {
   width: 0; transition: width 1.3s var(--ease);
 }
 
+/* ─── Projects ───────────────────────────────────────────── */
+.project-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  display: flex; flex-direction: column; align-items: flex-start;
+  text-align: left; min-height: 250px;
+}
+.project-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px; margin-bottom: 20px;
+  border-radius: 14px; background: var(--accent-soft);
+  color: var(--accent); font-size: 1.35rem;
+}
+.project-category {
+  color: var(--muted); font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 8px;
+}
+.project-card h2 {
+  font-family: 'Syne', sans-serif; font-size: 1.15rem;
+  font-weight: 700; margin-bottom: 10px;
+}
+.project-card p {
+  color: var(--muted2); font-size: 0.87rem; line-height: 1.7;
+  margin-bottom: 22px;
+}
+.project-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: auto; color: var(--accent); font-size: 0.85rem;
+  font-weight: 600; transition: gap var(--transition);
+}
+.project-link:hover { gap: 12px; }
+
 /* ─── Certificates ───────────────────────────────────────── */
 .cert-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
