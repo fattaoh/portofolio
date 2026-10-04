@@ -442,6 +442,9 @@ nav.scrolled {
 .skill-icon.html5  { color: #e34f26; }
 .skill-icon.css3   { color: #1572b6; }
 .skill-icon.js     { color: #f7df1e; }
+.skill-icon.php    { color: #777bb3; }
+.skill-icon.laravel { color: #ff2d20; }
+.skill-icon.dart   { color: #00b4ab; }
 .skill-name {
   font-family: 'Syne', sans-serif;
   font-size: 1.1rem; font-weight: 700; margin-bottom: 8px;
